@@ -1,21 +1,4 @@
-# Leap Year
+l1=['shoes','cars','laptop']
 
-'''''
-
-year%4 == 0&
-year%100!=0/
-year%400 ==0
-
-'''''
-def isLeapYear(year):
-  if(year%4==0 and year%100!=0)or year% 400==0:
-    return True
-
-  else:
-    return False
-year=2015
-
-if isLeapYear(year): 
-  print('[] is not a Leap Year.'.format(year))
-else:
-  print('[]is not a leap year.'.format(year))
+for i,j in enumerate(l1):
+  print(i,j)

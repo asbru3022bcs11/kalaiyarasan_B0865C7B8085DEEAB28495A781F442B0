@@ -1,25 +1,25 @@
-# 1.1 implement a recursive function to calculate
-'''''
+class Student:
+    def __init__(self, name, roll_number, cgpa):
+        self.name = name
+        self.roll_number = roll_number
+        self.cgpa = cgpa
 
-1!= 1×1
-2 != 2 × 1! ---> 2 × 1 
-3!=3×2! --->3×2×1
+def sort_students(student_list):
+    # Sort the list of students in descending order of cgpa
+    sorted_students = sorted(student_list, key=lambda student: student.cgpa, reverse=True)
+    return sorted_students
 
+# Example usage
+students = [
+    Student("hari", "A123", 7.8),
+    Student("srikanth", "A124", 8.9),
+    Student("Sowmiya", "A125", 9.1),
+    Student("mahidhar", "A126", 9.9)
+]
 
-10!-10×9! --->10×9×8*.....*1
+sorted_students = sort_students(students)
 
-Formula -nx(n-1)!
-''' ''
-
-
-def fact_rec(n):
-  if n == 0 or n == 1:
-    return 1
-  else:
-    return n * fact_rec(n - 1)
-
-
-number = int(input("Enter a value:"))
-res = fact_rec(number)
-
-print("The factorial of {} is {}.".format(number, res))
+# Print the sorted list of students
+for student in sorted_students:
+    print("name: {}, roll number: {}, cgpa: {}".format(student.name, student.roll_number, student.cgpa))
+  
